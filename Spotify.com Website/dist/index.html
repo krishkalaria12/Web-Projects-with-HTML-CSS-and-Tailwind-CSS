@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music For Everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-black text-white">
+    <div class="flex lg:flex-row flex-col">
+        <header class="lg:w-[30%] w-full lg:py-2 lg:px-2 sm:block hidden">
+            <div class="font-poppins bg-[#121212] lg:border-0 border-b-[1px] border-[#888989] lg:rounded-lg p-4 font-semibold text-lg">
+                <div class="flex space-x-6 cursor-pointer">
+                    <div class="text-white">
+                        <img class="fill-white" src="./assets/home.svg" alt="">
+                    </div>
+                    <div>Home</div>
+                </div>
+                <div class="flex space-x-6 cursor-pointer items-center mt-6 text-[#757575] hover:text-white transition-all">
+                    <div>
+                        <img class="w-6" src="./assets/search.svg" alt="">
+                    </div>
+                    <div>Search</div>
+                </div>
+            </div>
+            <div class="lg:mt-3 bg-[#121212] py-4 px-6 lg:rounded-lg flex flex-col space-y-6">
+                <div class="flex justify-between items-center">
+                    <div class="flex space-x-6 text-[#a7a7a7] hover:text-white active:text-white cursor-pointer items-center">
+                        <div>
+                            <img src="./assets/library.svg" alt="">
+                        </div>
+                        <div class="font-poppins font-semibold">
+                            Your Library
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="text-[#9e9f9f]">
+                            <span>
+                                <i class="fa-solid fa-plus text-lg cursor-pointer"></i>
+                            </span>
+                        </div>
+                        <div class="text-[#9e9f9f]">
+                            <span>
+                                <i class="fa-solid fa-arrow-right text-lg cursor-pointer"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button class="bg-[#232323] text-sm  px-3 py-1 rounded-full font-poppins">Playlists</button>
+                    <button class="bg-[#232323] text-sm  px-3 py-1 rounded-full font-poppins">Artists</button>
+                </div>
+                <div class="scrollbar-thin scrollbar-thumb-[#5a5a5a] scrollbar-w-5">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-[#b3b3b3] cursor-pointer">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                        </div>
+                        <div class="flex items-center gap-4 font-semibold cursor-pointer font-poppins text-[#b3b3b3]">
+                            Recents
+                            <span>
+                                <i class="fa-solid fa-caret-down text-lg"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex space-x-4 cursor-pointer hover:bg-[#232323] transition-all p-2">
+                            <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-12 w-12  inline-flex justify-center items-center">
+                                <span>
+                                    <i class="fa-solid fa-heart fa-xl"></i>
+                                </span>
+                            </div>
+                            <div class="font-roboto">
+                                <p class="text-[#1ed760]">Liked Songs</p>
+                                <div class="flex space-x-2">
+                                    <span class="text-[#1ed760]">
+                                        <i class="fa-solid fa-thumbtack"></i>
+                                    </span>
+                                    <p class="text-[#b3b3b3] text-sm">Playlist . 16 songs</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex space-x-4 cursor-pointer hover:bg-[#232323] transition-all p-2">
+                            <div class="bg-[#282828] h-12 w-12 inline-flex justify-center items-center">
+                                <span class="font-light">
+                                    <i class="fa-solid fa-music fa-xl"></i>
+                                </span>
+                            </div>
+                            <div class="font-roboto">
+                                <p class=" tracking-wider">My playlist #2</p>
+                                <div class="">
+                                    <p class="text-[#b3b3b3] text-sm">Playlist . krishkalaria</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex space-x-4 cursor-pointer hover:bg-[#232323] transition-all p-2">
+                            <div class="bg-[#282828] h-12 w-12 inline-flex justify-center items-center">
+                                <span class="font-light">
+                                    <i class="fa-solid fa-music fa-xl"></i>
+                                </span>
+                            </div>
+                            <div class="font-roboto">
+                                <p class=" tracking-wider">My playlist #2</p>
+                                <div class="">
+                                    <p class="text-[#b3b3b3] text-sm">Playlist . krishkalaria</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex space-x-4 cursor-pointer hover:bg-[#232323] transition-all p-2">
+                            <div class="inline-flex justify-center items-center">
+                                <img class="h-14 w-14 rounded-full" src="./assets/tulsi.webp" alt="">
+                            </div>
+                            <div class="font-roboto">
+                                <p class="">Tulsi Kumar</p>
+                                <div class="flex space-x-2">
+                                    <p class="text-[#b3b3b3] text-sm">Artist</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex space-x-4 cursor-pointer hover:bg-[#232323] transition-all p-2">
+                            <div class="inline-flex justify-center items-center">
+                                <img class="h-14 w-14 rounded-full" src="./assets/neha.webp" alt="">
+                            </div>
+                            <div class="font-roboto">
+                                <p class="">Neha Kakkar</p>
+                                <div class="flex space-x-2">
+                                    <p class="text-[#b3b3b3] text-sm">Artist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <header class="flex px-4 py-2 justify-between items-center sm:hidden">
+            <div>
+                <img class="w-40" src="./assets/Spotify_Logo_RGB_White.png" alt="">
+            </div>
+            <div class="flex items-center space-x-4">
+                <div>
+                    <img class="w-6" src="./assets/search.svg" alt="">
+                </div>
+                <div>
+                    <button class="bg-white rounded-full font-poppins font-bold text-black py-1 px-2">Open in App</button>
+                </div>
+                <div class="text-white text-lg">
+                    <i class="fa-solid fa-bars fa-xl"></i>
+                </div>
+            </div>
+        </header>
+    
+        <main class="lg:w-[70%] w-full bg-[#1c1c1d] text-white lg:max-h-[40rem] rounded-lg py-4 px-4 lg:my-2 ml-0 mr-2 lg:overflow-y-scroll lg:scrollbar lg:scrollbar-thumb-[#5a5a5a] lg:scrollbar-h-16 lg:overflow-x-hidden">
+            <div class="flex items-center justify-center sm:justify-between">
+                <div class="sm:flex hidden space-x-4 ">
+                    <div class="bg-[#101010] h-10 w-10 rounded-full inline-flex justify-center items-center cursor-pointer">
+                        <span>
+                            <i class="fa-solid fa-angle-left fa-lg"></i>
+                        </span>
+                    </div>
+                    <div class="bg-[#101010] h-10 w-10 rounded-full inline-flex justify-center items-center cursor-pointer">
+                        <span>
+                            <i class="fa-solid fa-angle-right fa-lg"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="flex space-x-3">
+                    <button class="font-poppins px-4 bg-white text-black font-bold rounded-full text-sm hover:scale-105">Explore Premium</button>
+                    <button class="font-poppins px-4 rounded-full text-sm bg-[#101010] font-bold hover:scale-105">Install App</button>
+                    <div class="bg-[#101010] h-10 w-10 rounded-full inline-flex justify-center items-center cursor-pointer">
+                        <span>
+                            <i class="fa-regular fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">Recently Played</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll">
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl ">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <span class=" text-3xl">
+                                <i class="fa-solid fa-heart"></i>
+                            </span>
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Liked Songs</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">16 songs</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02ad40f4e70b2f2a2a6052d49dab67616d00001e02add6b0e45df7005a55e89c8aab67616d00001e02cff978906e5901b8efacc904ab67616d00001e02fb4eea336b8168fb458108eb.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Munda Thoda Off Beat Ho</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">By PritamVara</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02d4a76235197643b7d252dd5d.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Tere Vaste (from "Zara Hatke Zara Bachke")</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Varun Jain , Sachin Jigar, Amitabh Bhattacharya</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02707ea5b8023ac77d31756ed4.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider">Yeh Jawaani hain Deewani</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">By Pritam</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706c0000da84a3ff8736ea5b316a90408a50.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Nachde Se Saare</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">By anjali</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">Spotify original & Exclusive Shows</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll">
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67656300005f1f3c0cd1efd66f78f05f13632a.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">True Story Bro! with triggered insaan</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Spotify</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67656300005f1ff546434b546536da24c88196.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">The Mythpat Podcast</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Spotify Studios</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67656300005f1f744d52d2505209e5b534d862.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Maha Bharat with Dhruv Rathee</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Spotify Studios</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67656300005f1f3a91e37673ed6bb7261083e6.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider">Horror time - Dark Stories in Hindi</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Horror Time</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67656300005f1f4ce921e8f50753f130980d10.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Pajama Party with Captain Nick</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Spotify Studios</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">Made For You</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll">
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/default (5).jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Discover Weekly</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">
+                                Playlist
+                                Your weekly mixtape of fresh music. Enjoy new music and deep cuts picked for you. Updates every Monday.</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/default.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Daily Mix 1</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Pritam, Shankar-Ehsaan-Loy, Darshan Raval and more</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/default (1).jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Daily Mix 2</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Tanishk Bagchi, A.R. Rahman, Pritam and more</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/default (2).jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider">Daily Mix 3</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Anirudh Ravichander, Dhanush, AP Dhillon and more</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/default (3).jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Daily Mix 4</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">BLACKPINK, JIN, Stray Kids and more</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">Today's Biggest Hits</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll">
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f0000000204d6b7c3032943098cde8b9a.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Hot Hits India</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">The hottest tracks in India. Cover: Dua Lipa</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f0000000251eb7d47276468cbe171bc64.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Hot Hits Hindi</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Hottest Hindi music served here. Cover - Rocky Aur Rani Kii Prem Kahaani</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002a11e0756ea85746dc69f258a.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Punjabi X</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Catch all the collaborations and crossovers in Punjabi music. Cover: Guru Randhawa</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002dac6b6b1722528ee7fc14424.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider">Hot Hits Tamil</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Tune into the Hottest tracks of Kollywood! Cover : Jailer</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f0000000287140079dbd5db350aa5a5fc.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Hot Hits Telugu</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Tune in to the Hottest Tracks of Tollywood! Cover : Virupaksha</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">Trending Now</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll">
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02bf35774f0ca5e1c3cfb4c222.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Mahiye Jinna Sohna</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Darshan Raval</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e028fdeaaad4565938c6eb6c32d.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Love Stereo Again</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Edward Maya , Tanishk Bagchi, Zahrah S Khan.</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02d49b0b7c02f3e61babef11b7.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">What Jumka? (From "Rocky and Rani Ek Prem Katha")</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Pritam, Jonita Gandhi, Arjit Singh</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e0202ea9d69484ed871c3e34bea.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider">Heeriye (feat.Arjit Singh)</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Jasleen Royal, Arjit Singh, Dulquer Salman</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02ac515af787eb2080c7a0b129.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Kaavaalaa (From "Jailer")</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Shilpa Rao, Anirudh Ravichander</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">More Of what You like</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll">
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f000000023719f1afb75553bb9142376f.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Bollywood Butter</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">B bole toh biggest blockbusters, right here! Koi Shaq? 😎 Cover - Rocky Aur Rani Kii Prem Kahaani</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002f78d4eec0ef1a8d1deb68bc0.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Top Artists of 2022 India</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Catch the most streamed artist in 2022 #SpotifyWrapped</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002a0cedbd7f585bb478d472f8e.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Safar Mix</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">A perfect travel mix for your journey.</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f0000000231afc457487081a234578594.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider">House Party Hits</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Kickstart your house party with these hits.</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f0000000265c502a2ae1996329d0e0c14.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Happy Vibes</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Let these happy tunes put a smile on your face. Cover - Jab Harry Met Sejal</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">Best of Actors</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll">
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002cca8a4629b8d9f23f3ba3831.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Starring Shahid Kapoor</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Essential tracks of Shahid Kapoor all in one playlist</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002d9c782567c6918b0f5247e2d.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Starring Hrithik Roshan</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Essential tracks of Hrithik Roshan all in one playlist</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002da8a1199df6e4a5416a46f29.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Starring Kareena Kapoor</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Essential tracks of Kareena Kapoor all in one playlist</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002176cd7b0c486c80d1a8c5e8a.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider">Starring Ranveer Singh</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Essential tracks of Ranveer Singh all in one playlist</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002f4600d04880a322fe59d2e4d.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Starring Anushka Sharma</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Essential tracks of Anushka Sharma all in one playlist</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">ThrowBack</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll">
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f0000000257210e5a0bd9ebeebcbfec6a.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">All Out 00's Hindi</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Bollywood songs that ruled hearts in the Y2K decade. Cover - Om Shanti Om</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f0000000222fbce08dcea660cb028daf3.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">90s Swagger</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Everything from cheesy floor-fillers to big beat bangers. Cover - Kuch Kuch Hota Hai</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002a83fdc5149b38e4eb5f1a681.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">90s Love Hits</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Relive the '90s with these beautiful romantic hits. Cover - Hum Aapke Hain Kaun</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f000000025daddfb2c5a4fe98b2492e0b.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider">90s Dance Bollywood</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Get jiggy with 90s 'dhinchak' beats. Cover - Dil Se</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f000000021f117d549a7f0e4e63c4bb9b.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">00s Dance Tamil</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">00's music that makes you wanna move Cover : Vettaikkaran</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">India's Best</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll">
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002b05ff8ac209d1a5d4d00d1f9.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Indie India</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Best of the Indian Indie scene. Cover - Akanksha Bhandari</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f000000027f7b6dd84803aca2faf91862.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Desi Hits</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Best of South Asian Music. Cover: Diljit</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f000000025336b036df6a6219d18e2892.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Punjabi 101</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Ultimate 101 Punjabi Hits with Shubh</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002b8d7f9864f0c93a6287880b7.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider">Tollywood Pearls</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">The finest set of Telugu music from the past 5 years. Cover : RRR</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706f00000002962ff8fe5d12637528c0645f.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Kollywood Cream</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Finest collection of Tamil Music from the past 10 years Cover : LEO</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">Suggested Artists</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll">
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab6761610000517411d0343dc3387fc183dab2e0.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Ajey Nagar ("Carry Minati")</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Artist</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab6761610000517470c49f3dc1c15d474ec99cc2.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">The Lofi NightCore</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Artist</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616100005174e219847b48821dd33b0659be.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Alma Zarza</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Artist</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e023f3d35703bdcd917dad51c4f.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider">Shae Gill</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Artist</p>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px]">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02e5c384dc26ad5e88cf6295c9.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden">Coffin EDM</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Artist</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="text-white mt-12 p-2">
+                <div class="md:grid-cols-5 items-center sm:text-start text-center sm:gap-0 gap-8 sm:items-start justify-center sm:grid-cols-2 grid-cols-1 grid py-8 border-b-[1px] border-[#a7a7a7]">
+                    <div>
+                        <h3 class="font-bold font-poppins">Company</h3>
+                        <ul>
+                            <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:underline pt-2">About</li>
+                            <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:underline pt-2">Jobs</li>
+                            <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:underline pt-2">For the Record</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold font-poppins">Communities</h3>
+                        <ul>
+                            <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:underline pt-2">For Artists</li>
+                            <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:underline pt-2">Developers</li>
+                            <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:underline pt-2">Advertising</li>
+                            <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:underline pt-2">Investors</li>
+                            <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:underline pt-2">Vendors</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold font-poppins">Useful Links</h3>
+                        <ul>
+                            <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:underline pt-2">Support</li>
+                            <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:underline pt-2">Free Mobile App</li>
+                        </ul>
+                    </div>
+                    <div class="flex space-x-4 md:col-start-4 justify-center sm:justify-end md:col-end-6">
+                        <div class="bg-[#292828] rounded-full h-12 w-12 inline-flex justify-center items-center cursor-pointer">
+                            <img src="./assets/facebook.svg" alt="">
+                        </div>
+                        <div class="bg-[#292828] rounded-full h-12 w-12 inline-flex justify-center items-center cursor-pointer">
+                            <img src="./assets/instagram.svg" alt="">
+                        </div>
+                        <div class="bg-[#292828] rounded-full h-12 w-12 inline-flex justify-center items-center cursor-pointer">
+                            <img src="./assets/twitter.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 flex md:flex-row flex-col space-y-6 md:space-y-0 justify-between items-center">
+                    <ul class="flex sm:space-x-4 flex-wrap sm:flex-row flex-col sm:space-y-0 space-y-6">
+                        <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:text-white hover:font-bold text-sm">Legal</li>
+                        <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:text-white hover:font-bold text-sm">Privacy Center</li>
+                        <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:text-white hover:font-bold text-sm">Privacy Policy</li>
+                        <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:text-white hover:font-bold text-sm">Cookies</li>
+                        <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:text-white hover:font-bold text-sm">About Ads</li>
+                        <li class="font-roboto cursor-pointer text-[#a7a7a7] hover:text-white hover:font-bold text-sm">Accessibility</li>
+                    </ul>
+                    <p class="font-poppins text-sm text-[#a7a7a7]">© 2023 Spotify AB</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-black p-2 flex justify-between items-center sm:flex-row flex-col">
+        <div class="flex space-x-4 items-center">
+            <div class="cursor-pointer">
+                <img src="./assets/ab67616d00004851576521b1bf3ec2fd7fdfcbd5.jpeg" alt="">
+            </div>
+            <div>
+                <p class="font-poppins font-bold hover:underline">Dil Diyan Gallan</p>
+                <p class="font-roboto text-sm max-w-[16rem] text-ellipsis overflow-hidden whitespace-nowrap text-[#858585]">Vishal-Shekhar, Atif Aslam, Irshad Kamli</p>
+            </div>
+            <div class="flex">
+                <img src="./assets/heart.svg" alt="">
+                <img class="" src="./assets/minimise.svg" alt="">
+            </div>
+        </div>
+        <div class="flex space-x-4 items-center justify-center mt-4">
+            <div class="cursor-pointer">
+                <img src="./assets/shuffle.svg" alt="">
+            </div>
+            <div class="cursor-pointer">
+                <img src="./assets/previous_video.svg" alt="">
+            </div>
+            <div class="h-8 w-8 rounded-full bg-white inline-flex cursor-pointer justify-center items-center">
+                <img src="./assets/player.svg" alt="">
+            </div>
+            <div class="cursor-pointer">
+                <img src="./assets/next_video.svg" alt="">
+            </div>
+            <div class="cursor-pointer">
+                <img src="./assets/repeat.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden lg:flex justify-between p-4 items-center absolute bottom-0 left-0 right-0 bg-black lg:flex-row flex-col lg:space-y-0 space-y-8">
+        <div class="flex space-x-4 items-center">
+            <div class="cursor-pointer">
+                <img src="./assets/ab67616d00004851576521b1bf3ec2fd7fdfcbd5.jpeg" alt="">
+            </div>
+            <div>
+                <p class="font-poppins font-bold hover:underline">Dil Diyan Gallan</p>
+                <p class="font-roboto text-sm max-w-[16rem] text-ellipsis overflow-hidden whitespace-nowrap text-[#858585]">Vishal-Shekhar, Atif Aslam, Irshad Kamli</p>
+            </div>
+            <div class="flex">
+                <img src="./assets/heart.svg" alt="">
+                <img class="" src="./assets/minimise.svg" alt="">
+            </div>
+        </div>
+        <div>
+            <div class="flex space-x-4 items-center justify-center">
+                <div class="cursor-pointer">
+                    <img src="./assets/shuffle.svg" alt="">
+                </div>
+                <div class="cursor-pointer">
+                    <img src="./assets/previous_video.svg" alt="">
+                </div>
+                <div class="h-8 w-8 rounded-full bg-white inline-flex cursor-pointer justify-center items-center">
+                    <img src="./assets/player.svg" alt="">
+                </div>
+                <div class="cursor-pointer">
+                    <img src="./assets/next_video.svg" alt="">
+                </div>
+                <div class="cursor-pointer">
+                    <img src="./assets/repeat.svg" alt="">
+                </div>
+            </div>
+            <div class="flex space-x-2 items-center mt-2">
+                <span class="text-sm font-poppins text-[#8d8d8c]">0:00</span>
+                <div class="bg-[#4a4b4a] h-[3px] w-96"></div>
+                <span class="text-sm font-poppins text-[#8d8d8c]">4:20</span>
+            </div>
+        </div>
+        <div class="flex space-x-3 items-center">
+            <div class="cursor-pointer">
+                <img src="./assets/box_player.svg" alt="">
+            </div>
+            <div class="cursor-pointer">
+                <img src="./assets/mike.svg" alt="">
+            </div>
+            <div class="cursor-pointer">
+                <img src="./assets/playlist.svg" alt="">
+            </div>
+            <div class="cursor-pointer">
+                <img src="./assets/speak.svg" alt="">
+            </div>
+            <div class="flex items-center space-x-2">
+                <img src="./assets/volume.svg" alt="">
+                <div class="bg-white text-white h-[4px] w-28"></div>
+            </div>
+        </div>
+    </div>
+</html>

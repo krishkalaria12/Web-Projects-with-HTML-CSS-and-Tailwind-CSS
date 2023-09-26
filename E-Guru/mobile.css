@@ -1,0 +1,58 @@
+@media screen and (max-width:853px) {
+    .menu , .profile {
+        display: block;
+    }
+    .mobile-css {
+        display: none;
+    }
+    .profile > img {
+        width: 3rem;
+    }
+    .menu > img {
+        width: 3rem;
+    }
+}
+@media screen and (max-width:1024px) {
+    .chooseus {
+        flex-wrap: wrap;
+        gap: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .chooseus > div {
+        width: 46%;
+    }
+}
+@media screen and (max-width:844px) {
+    .chooseus > div {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:600px) {
+    .heroBtn {
+        flex-wrap: wrap;
+    }
+    .heroBtn > button {
+        width: 100%;
+    }
+    .heroContent > h1 {
+        font-size: 34px;
+    }
+}
+@media screen and (max-width:1186px) {
+    .heroSection {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .heroImage , .heroContent {
+        width: 100%;
+    }
+    .heroPara > p {
+        width: 100%;
+    }
+    .heroContent {
+        justify-content: center;
+        align-items: center;
+    }
+}

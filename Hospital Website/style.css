@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+* , ::after , ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body {
+    scroll-behavior: smooth;
+}
+:root {
+    --font-header: 'Poppins', sans-serif;
+    --font-other: 'Roboto', sans-serif;
+}
+:root {
+    --color-primary: white;
+    --color-secondary: #4ba9f6;
+    --color-tertiary: #007FFF;
+}
+
+/* ===============
+    Utility Classes
+================== */
+
+.flex {
+    display: flex;
+}
+.align {
+    align-items: center;
+}
+.mar-auto {
+    margin: 0 auto;
+}
+.pointer {
+    cursor: pointer;
+}
+.container {
+    max-width: 1300px;
+    padding: 0px 1.5rem;
+    margin: 0 auto;
+}
+section {
+    margin-top: 3rem!important;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.3rem;
+    font-family: var(--font-header);
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn-primary {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+    border: 0;
+}
+.btn-secondary {
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+/* ===================
+    Header
+====================== */
+
+.navbar {
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    font-family: var(--font-header);
+}
+.navbar-nav {
+    list-style-type: none;
+    gap: 2rem;
+}
+.nav > h1 {
+    font-size: 28px;
+}
+.mobileCSS {
+    display: block;
+}
+
+.nav {
+    gap: 4rem;
+}
+.nav-item {
+    font-size: 16px;
+    font-weight: 600;
+}
+.headerBtn {
+    gap: 1rem;
+}
+.headerBtn:hover {
+    transform: scale(1.1);
+}
+
+/* ===================
+    Hero Section
+====================== */
+
+.heroBtn > button {
+    border-radius: 32px;
+}
+.heroBtn {
+    gap: 1rem;
+}
+.heroContent , .heroForm {
+    width: 50%;
+}
+.heroContent {
+    flex-direction: column;
+    gap: 2rem;
+}
+.heroContent > h1 {
+    font-size: 60px;
+    font-weight: 600;
+    font-family: var(--font-header);
+}
+.heroContent > p {
+    font-size: 21px;
+    font-family: var(--font-other);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+form > h2 {
+    font-family: var(--font-header);
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+.userForm > p {
+    font-family: var(--font-other);
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(86, 78, 78);
+}
+.userForm > input {
+    width: 100%;
+}
+.userForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.Form {
+    width: 50%;
+}
+.heroForm {
+    background-color: var(--color-primary);
+    color: black;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    margin: auto;
+    width: 25rem;
+}
+.heroSection {
+    position: relative;
+    background-image: url("./assets/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-size: cover;
+    padding-bottom: 7rem;
+    color: var(--color-primary);
+}
+.userForm > input {
+    height: 3rem;
+    font-size: 18px;
+    background-color: #eeeeee;
+    border: 0;
+    padding: 0.6rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+input::placeholder {
+    font-size: 14px;
+    font-family: var(--font-other);
+    color: gray;
+    text-align: left;
+}
+select {
+    height: 3rem;
+    background-color: #eeeeee;
+    padding: 0.6rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+option {
+    height: 2rem;
+}
+/* .bgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: contain;
+    z-index: -1;
+    height: auto;
+    width: 100%;
+} */
+
+/* =======================
+    Leading Medicine
+========================= */
+
+.medicineContent {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+.medicineContent > p {
+    font-family: var(--font-other);
+    font-size: 24px;
+    font-family: var(--font-header);
+    font-weight: 600;
+}
+.medicineHead {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.medicineHead > h1 {
+    font-family: var(--font-header);
+    font-size: 48px;
+}
+.medicineHead > p{
+    font-family: var(--font-other);
+    font-size: 18px;
+    color: #3e3f41;
+    margin-top: 0.8rem;
+}
+.medicineDesc  {
+    font-family: var(--font-other);
+    border: 2px solid var(--color-secondary);
+    padding: 2rem 3rem;
+}
+.medicineList {
+    font-size: 18px;
+    color: #3e3f41;
+    margin-bottom: 14px;
+}
+.medicineDesc > span {
+    color: var(--color-secondary);
+    font-size: 18px;
+    font-weight: 600;
+}
+.medicineContent {
+    gap: 1rem;
+    justify-content: center;
+    height: 8rem;
+}
+.medicineSection {
+    border-radius: 8px;
+    width: 30%;
+    overflow: hidden;
+}
+.medicineUser {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+}
+.MedicineDemo {
+    justify-content: space-around;
+}
+
+/* ==================================
+    Leading Medicine customer Review
+===================================== */
+
+.userImg {
+    width: 3rem;
+    height: 3rem;
+}
+.review {
+    flex-direction: column;
+    background-color: var(--color-primary);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 30%;
+    gap: 2rem;
+    padding: 2rem 2rem;
+}
+.review > p{
+    font-family: var(--font-other);
+    font-size: 18px;
+    color: rgb(3 7 18);
+    line-height: 32px;
+}
+.reviewSection {
+    justify-content: space-around;
+}
+
+/* ================
+    FAQ'S Section
+================== */
+
+.FAQ {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 6rem;
+    grid-row-gap: 2rem;
+}
+@media screen and (max-width:1024px) {
+    .FAQ {
+        grid-column-gap: 3rem;
+    }
+}
+.faqSection {
+    /* background-color: aqua; */
+    gap: 1rem;
+    /* width: 30%; */
+    padding: 1rem;
+}
+.faqhead {
+    font-size: 18px;
+    font-weight: 900;
+    font-family: var(--font-header);
+    color: rgb(30 64 175);
+}
+.faqdesc {
+    font-size: 18px;
+    font-family: var(--font-other);
+    color: rgb(107 114 128);
+    margin-top: 10px;
+}
+
+/* ================
+    Pricing Section
+================== */
+
+.pricing {
+    border: 1px solid var(--color-secondary);
+    border-radius: 12px;
+    background-color: var(--color-primary);
+    width: 37%;
+    min-height: 37rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.check {
+    background-color: rgb(8, 203, 66);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.checknot {
+    background-color: gray;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.pricingitems {
+    gap: 0.8rem;
+}
+.pricehead > h3 {
+    font-family: var(--font-header);
+    font-weight: bold;
+    font-size: 22px;
+}
+.pricehead > p {
+    font-family: var(--font-other);
+    font-size: 18px;
+    color: rgb(107 114 128);
+}
+.price > span {
+    font-size: 24px;
+    font-weight: 900;
+    
+}
+.pricingitems > p {
+    font-family: var(--font-header);
+    font-size: 18px;
+    font-weight: 600;
+}
+.dollar {
+    font-weight: 900;
+    font-size: 18px;
+}
+.pricehead {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    gap: 2rem;
+}
+.items {
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.month {
+    font-family: var(--font-other);
+}
+.price {
+    gap: 1rem;
+    color: var(--color-secondary);
+    justify-content: center;
+}
+.pricemonth {
+    flex-direction: column;
+    gap: 1rem;
+}
+.pricingsection {
+    justify-content: center;
+}
+
+/* ================
+    Get in touch Section
+================== */
+
+.Touch {
+    justify-content: space-between;
+}
+.touchcontent {
+    width: 40%;
+}
+.touchcontent > h1 {
+    font-family: var(--font-header);
+    font-size: 48px;
+    font-weight: 900;
+}
+.touchcontent > p {
+    font-family: var(--font-other);
+    font-size: 18px;
+    margin-top: 10px;
+}
+.subscribe > input {
+    height: 3rem;
+    width: 16rem;
+    font-size: 18px;
+    font-family: var(--font-other);
+    padding: 1rem;
+}
+.subscribe > input::placeholder {
+    color: gray;
+}
+
+/* ================
+    Footer Section
+================== */
+
+.footerContent {
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.footerContent > h3 {
+    font-family: var(--font-header);
+    font-size: 24px;
+    font-weight: 900;
+    color: #041a2f;
+}
+.footerContent > p {
+    font-family: var(--font-other);
+}
+.socialicons {
+    gap: 1rem;
+}
+.footerlinks > h3 {
+    font-family: var(--font-header);
+    font-size: 20px;
+    font-weight: 900;
+    color: #041a2f;
+}
+.footeritem {
+    margin-top: 10px;
+    font-family: var(--font-other);
+    color: gray;
+    font-weight: 600;
+}
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.lastfooter {
+    font-size: 20px;
+    font-family: var(--font-header);
+    padding: 1.2rem;
+    text-align: center;
+}
+.last {
+    background-color: rgb(200, 191, 191);
+}

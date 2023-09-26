@@ -1,0 +1,91 @@
+@media screen and (max-width:835px) {
+    nav {
+        display: none;
+    }
+    .reviewSection{
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .review {
+        width: 100%;
+    }
+    .footer {
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap: 2rem;
+    }
+    .Touch {
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        gap: 2rem;
+    }
+    .touchcontent {
+        width: 100%;
+    }
+}
+@media screen and (max-width:903px) {
+    .FAQ {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:540px) {
+    .headerBtn {
+        display: none;
+    }
+    .FAQ {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .footer {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media screen and (min-width:835px) {
+    .mobileCSS {
+        display: none;
+    }
+    
+}
+@media screen and (max-width:1101px) {
+    .pricing {
+        width: 100%;
+        margin-top: 3rem;
+    }
+    .pricingsection {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:1024px) {
+    .hero {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .heroContent , .Form {
+        width: 100%;
+    }
+    .heroContent {
+        justify-content: center;
+        align-items: center;
+    }
+    .heroForm {
+        max-width: 25rem;
+    }
+    .MedicineDemo {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .medicineSection {
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:447px) {
+    .heroForm {
+        width: 19rem;
+    }
+    .heroBtn {
+        flex-wrap: wrap;
+    }
+    .heroBtn > button {
+        width: 100%;
+    }
+}

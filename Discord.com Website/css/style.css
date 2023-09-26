@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Roboto&display=swap');
+/* ==================
+    CSS input
+===================== */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-weight: 400;
+    line-height: 1.125;
+}
+:root {
+    --font-para: 'Roboto', sans-serif;
+    --font-display: 'Manrope', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+}
+:root {
+    --brand: #5865f2;
+    --brand-gradient: linear-gradient(90deg,#8ea1e1,#7289da);
+    --greyple: #99aab5;
+    --dark-not-black: #2c2f33;
+    --focus-border: #00b0f4;
+    --status-green: #43b581;
+    --text-link: #00b0f4;
+    --off-white: #f6f6f6;
+    --white: #fff;
+    --not-quite-black: #23272a;
+    --not-quite-black-rgb: 35,39,42;
+    --black: #000;
+    --ekko-red: #de2761;
+    --page-max-width: 1260px;
+    --page-max-width-med: 1024px;
+    --section-spacing: 120px;
+    --page-gutter: 40px;
+
+} 
+
+/* ==================
+    Utility Classes 
+===================== */
+.flex {
+    display: flex;
+}
+.section {
+    padding: 3rem 4rem;
+}
+.align {
+    align-items: center;
+}
+.text {
+    text-align: center;
+}
+.pointer {
+    cursor: pointer;
+}
+.inline {
+    display: inline-flex;
+}
+.margin {
+    margin: auto;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+
+/* ================
+    Other Classes
+=================== */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background-color: #2a3bf5e3;
+    height: 680px;
+    overflow: hidden;
+}
+
+/* ================
+    Haader area
+=================== */
+
+.logo-3oeRIY {
+    color: var(--white);
+    flex: 0 0 auto;
+}
+.navbar-nav {
+    /* background-color: black; */
+    color: var(--white);
+    justify-content: space-around;
+    font-family: var(--font-heading);
+    padding: 1rem 0;
+    z-index: 9998;
+}
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar {
+    list-style: none;
+}
+.nav-item {
+    padding: 0 1rem;
+}
+.loginBtn {
+    background-color: var(--white);
+    color: var(--not-quite-black);
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-weight: 600;
+    display: inline-flex;
+    border: 0;
+}   
+.loginBtn:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    color: var(--brand);
+}
+.header {
+    max-width: var(--page-max-width);
+    width: 100%;
+    margin:0 auto;
+    z-index: 1000;
+}
+.nav-link:hover {
+    border-bottom: 2px solid var(--off-white);
+}
+
+/* ================
+    hero section
+=================== */
+
+.intro {
+    padding-top: var(--section-spacing);
+    width: 100%;
+    max-width: var(--page-max-width);
+    margin: 0 auto;
+    font-family: var(--font-para);
+    z-index: 1000;
+    color: var(--white);
+}
+.downloadIcon {
+    position: absolute;
+    width: 26px;
+    top: 28%;
+    left: 14%;
+}
+.heroHead {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: bolder;
+}
+.heroContent {
+    width: 100%;
+    max-width: 780px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.9rem;
+}
+.herobtn {
+    padding: 16px 50px;
+    border-radius: 24px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+.herobtn:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+.download {
+    background-color: var(--white);
+    color: var(--not-quite-black);
+}
+.download:hover {
+    color: var(--brand);
+}
+.browser {
+    background-color: var(--black);
+    color: var(--off-white);
+}
+.heroBtns {
+    margin-top: 21px;
+    justify-content: center;
+}
+.down-btn {
+    padding: 0 2rem;
+    position: relative;
+}
+
+/* ================
+    Background Image
+=================== */
+
+.heroImageContainer-1VKPo3 {
+    position: relative;
+}
+.foregroundLeft {
+    position: absolute;
+    top: -198px;
+    left: -275px;
+}
+.foregroundRight {
+    position: absolute;
+    top: -206px;
+    right: -224px;
+}
+
+/* ================
+    Invite Section
+=================== */
+
+.invite-section {
+    padding: var(--section-spacing) 0;
+    width: 100%;
+}
+.invitePara {
+    font-size: 20px;
+    font-family: var(--font-para);
+    line-height: 32.5px;
+    color: #23272a;
+    font-weight: 100;
+    /* margin-top: 24px; */
+}
+.inviteHead {
+    font-size: 48px;
+    font-family: var(--font-heading);
+    font-weight: bolder;
+    line-height: 57px;
+}
+.invite {
+    max-width: var(--page-max-width);
+    width: 100%;
+
+    transition: opacity .6s .1s,transform .6s ease,-webkit-transform .6s ease;
+    flex-direction: row;
+    gap: 169px;
+}
+.inviteContent {
+    color: var(--not-quite-black);
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    /* margin-top: -91px; */
+}
+
+.bgc {
+    background-color: #f6f6f6;
+}
+
+.hang-section {
+    padding: var(--section-spacing) var(--page-gutter);
+    width: 100%;
+}
+.hang {
+    max-width: var(--page-max-width);
+    width: 100%;
+    transition: opacity .6s .1s,transform .6s ease,-webkit-transform .6s ease;
+    flex-direction: row;
+    gap: 169px;
+}
+.hangContent {
+    color: var(--not-quite-black);
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    /* margin-top: -91px; */
+}
+.hangHead {
+    font-size: 48px;
+    font-family: var(--font-heading);
+    font-weight: bolder;
+    line-height: 57px;
+}
+.hangPara {
+    font-size: 20px;
+    font-family: var(--font-para);
+    line-height: 32.5px;
+    color: #23272a;
+    font-weight: 100;
+    /* margin-top: 24px; */
+}
+.close {
+    flex-direction: column;
+    max-width: var(--page-max-width);
+}
+.close-img {
+    width: 1180px;
+    height: 716px;
+}
+
+.journey-section {
+    width: 100%;
+    background-color: var(--off-white);
+}
+.downJourney {
+    position: relative;
+    flex-direction: column;
+}
+.sparklesContainer-28e48v {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.downJourney > h4 {
+    font-size: 28px;
+    font-family: var(--font-heading);
+    font-weight: 900;
+}
+.journey {
+    background-color: var(--brand);
+    color: var(--white);
+}
+.journey:hover {
+    color: var(--white);
+}
+.down-btn > img {
+    position: absolute;
+    top: 14px;
+    left: 43px;
+    fill: var(--white);
+}
+
+/* ================
+    Footer Section
+=================== */
+
+footer {
+    background-color: var(--not-quite-black);
+    padding-top: 80px;
+    padding-bottom: 64px;
+    color: var(--white);
+    font-family: var(--font-display);
+}
+.footer {
+    max-width: var(--page-max-width);
+    width: 100%;
+    flex-direction: column;
+}
+.langContainer {
+    gap: 12px;
+}
+.countryContainer {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 25px;
+}
+.social {
+    gap: 20px;
+}
+.soialICons {
+    color: var(--white);
+    fill: var(--white);
+}
+.footerLinks {
+    gap: 110px;
+}
+h5 {
+    color: #5865f2;
+    /* font-weight: 100; */
+    font-family: var(--font-heading);
+}
+.footer-nav {
+    list-style: none;
+    text-align: left;
+}
+.footerItem {
+    margin-top: 8px;
+    line-height: 24px;
+}
+.footerItem:hover {
+    text-decoration: solid underline var(--white) 1px;
+}
+.footerContainer{ 
+    justify-content: space-between;
+}
+.footerLogo {
+    max-width: var(--page-max-width);
+    width: 100%;
+}
+.footerDivider {
+    border-color: var(--brand);
+    height: 1px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+.signBtn {
+    background-color: var(--brand);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 12px 16px;
+}
+.signBtn:hover {
+    color: var(--white);
+    background-color: hsl(235,calc(var(--saturation-factor, 1)*86.1%),71.8%);
+}
+.social > a {
+    color: var(--white);
+}
+

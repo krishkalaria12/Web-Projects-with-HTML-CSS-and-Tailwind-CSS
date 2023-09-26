@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+* , ::after , ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+:root {
+    --font-header: 'Poppins', sans-serif;
+    --font-other: 'Roboto', sans-serif;
+}
+:root {
+    --color-primary: black;
+    --color-secondary: white;
+}
+
+/* ===============
+    Utility Classes
+================== */
+
+.flex {
+    display: flex;
+}
+.align {
+    align-items: center;
+}
+.mar-auto {
+    margin: 0 auto;
+}
+.pointer {
+    cursor: pointer;
+}
+.container {
+    max-width: 1300px;
+    padding: 0px 1.5rem;
+    margin: 0 auto;
+}
+section {
+    margin-top: 3rem!important;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-header);
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 4px;
+}
+.btn-primary:hover {
+    color: var(--color-secondary);
+    background-color: orangered;
+    border: 0;
+    transition: all 0.2s ease-in-out;
+}
+.btn-secondary:hover {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+    transition: all 0.2s ease-in-out;
+}
+.btn-primary {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+}
+.btn-secondary {
+    color: var(--color-secondary);
+    background-color: orangered;
+    border: 0;
+}
+/*===============
+    Header 
+=================*/
+
+.navbar {
+    justify-content: space-around;
+    font-family: var(--font-header);
+    padding: 2rem 0.5rem;
+}
+.navbar-nav {
+    list-style-type: none;
+    gap: 3rem;
+    
+}
+.other-item:hover {
+    color: orangered;
+    transition: all 0.1s ease-out;
+    font-weight: 600;
+}
+.logoHead {
+    font-size: 26px;
+    font-weight: 900;
+}
+.logoDiv {
+    gap: 0.6rem;
+}
+.menu , .profile {
+    display: none;
+}
+/*===============
+    Hero Section
+=================*/
+
+.heroContent {
+    width: 60%;
+}
+.heroImage {
+    width: 40%;
+    position: relative;
+}
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.heroContent > h1 {
+    font-size: 54px;
+    font-weight: 900;
+    font-family: var(--font-header);
+}
+.heroPara > p{
+    font-size: 24px;
+    width: 80%;
+    font-family: var(--font-other);
+    line-height: 34px;
+}
+.heroPara {
+    border-left: 1px solid black;
+    padding: 0rem 1.5rem;
+}
+.heroBtn {
+    gap: 1rem;
+}
+.hero {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    right: 10%;
+    height: 100%;
+    top: -4%;
+}
+.heroImg {
+    position: relative;
+}
+.mainbg {
+    max-width: 100%;
+}
+.otherImg {
+    position: relative;
+}
+.circle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.orangearrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.greenarrow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/*===============
+    Best Courses
+=================*/
+
+.chooseus {
+    justify-content: space-around;
+    gap: 9rem;
+    padding: 3rem 0;
+    align-items: start;
+}
+.vectorImg {
+    background-color: #0ed4a5;
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+}
+.Course > h3 {
+    font-family: var(--font-header);
+    font-size: 21px;
+}
+.Course > p {
+    font-size: 14px;
+    font-family: var(--font-other);
+    font-weight: 400;
+}
+.bestcourse > h1 {
+    font-size: 33px;
+    font-weight: 600;
+    font-family: var(--font-header);
+}
+.bestcourse > p {
+    font-size: 18px;
+    font-family: var(--font-other);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+.chooseus > div {
+    width: 25%;
+}
+.Course {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}

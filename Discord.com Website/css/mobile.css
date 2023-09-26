@@ -1,0 +1,59 @@
+:root {
+    --font-para: 'Roboto', sans-serif;
+    --font-display: 'Manrope', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+}
+:root {
+    --brand: #5865f2;
+    --brand-gradient: linear-gradient(90deg,#8ea1e1,#7289da);
+    --greyple: #99aab5;
+    --dark-not-black: #2c2f33;
+    --focus-border: #00b0f4;
+    --status-green: #43b581;
+    --text-link: #00b0f4;
+    --off-white: #f6f6f6;
+    --white: #fff;
+    --not-quite-black: #23272a;
+    --not-quite-black-rgb: 35,39,42;
+    --black: #000;
+    --ekko-red: #de2761;
+    --page-max-width: 1260px;
+    --page-max-width-med: 1024px;
+    --section-spacing: 120px;
+    --page-gutter: 40px;
+
+} 
+
+@media screen and (max-width:1180px) {
+    .mobile-section {
+        min-width: 1175px;
+        overflow: hidden;
+    }
+    .hang {
+        flex-direction: column;
+    }
+    .hangImg {
+        margin: auto;
+        display: block;
+        width: 50%;
+    }
+}
+@media screen and (max-width:875px) {
+    .hangPara {
+        font-size: 36px;
+        line-height: 47.5px;
+    }
+}
+
+@media screen and (max-width: 848px){
+body, html {
+    min-width: 320px;
+}}
+@media screen and (max-width: 1024px){
+body, html {
+    min-width: 824px;
+}
+}
+body {
+    min-width: 1000px;
+}
